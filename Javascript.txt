@@ -1,0 +1,167 @@
+* variables
+ 
+ const -> 상수 (always)
+ let -> 변수 (sometime)
+ var -> 규칙 없음, 옛날 방식 (never)
+
+
+ * Booleans
+
+ true / false
+ null : 비어있음, 어느 것도 아님
+ undefine : 정해지지 않음
+
+
+ * Arrays
+
+const arrayName = [var1, var2, ... , varN];
+
+ex)
+const nonsense = [1, 2, "hello", false, null, true, undefined, "bada"];
+
+--Get Item from Array--
+arrayName[n] -> n + 1번째 요소 출력
+컴퓨터는 0부터 센다!
+
+--Add one more var--
+arrayName.push(newVar);
+
+
+
+* Objects
+
+const objectName = {
+    property1: var1,
+    property2: var2,
+    ...
+};
+
+objectName.key1 이렇게 사용가능~
+
+
+* Function
+
+function funName(parameter, ...){
+    working...;
+    ...
+    ...
+
+    return ...;
+} 
+
+
+* 계산기 만들기,,ㅎ
+
+const calculator = {
+    add: function(a, b){
+        console.log(a + '+' + b + " = " + (a+b));
+    },
+    sub: function(a, b){
+        console.log(a + '-' + b + " = " + (a-b));
+    },
+    div: function(a, b){
+        console.log(a + '/' + b + " = " + (a/b));
+    },
+    mul: function(a, b){
+        console.log(a + '*' + b + " = " + (a*b));
+    },
+    pow: function(a, b){
+        console.log(a + '**' + b + " = " + (a**b));
+    }
+};
+
+
+* Conditional
+
+--if--
+
+if(){
+
+}else if(){
+
+}else{
+
+}
+
+&& And
+|| Or
+
+=== / !== 비교연산자
+
+
+HTML에 있는 정보를 JS로 가져올 수 있음
+
+HTML과 JS를 연결하기 위해 어떤 일도 할 필요가 없다! -> 이미 연결되어 있음
+
+document == web page
+
+
+--very very very 자주 사용--
+
+id로 HTML 요소 찾아서 JS에 넘기기
+a = document.getElementById("id")
+
+a.id, a.className 등 사용 가능..!
+
+
+CSS 방식으로 요소 불러오기
+ex)
+document.querySelector(".hello h1");
+-> hello class 안의 h1 불러오기
+
+
+--eventListener--
+
+ex)
+title.addEventListener("event", callback);
+
+--class 요소 추가 삭제하기--
+
+const clickedClass = "clicked";
+
+if(h1.classList.contains(clickedClass)){
+    h1.classList.remove(clickedClass);
+}else{
+    h1.classList.add(clickedClass);
+}
+
+===
+
+h1.classList.toggle("clicked");
+
+toggle은 위의 코드를 구현한 함수
+
+
+--html input 유효성 검사--
+
+input의 유효성을 검사하기 위해선 input이 form 안에 위치해야 함.
+
+
+--addEventListener---
+
+JS는 callback 함수를 실행할 때 발생한 event에 대한 정보를 첫번째 인자로써 전달함
+
+callback({information about the event that just happened})
+
+
+
+event.preventDefault();
+-> event가 정지되고 아무 것도 진행되지 않음
+
+
+"hello "+ name;
+`hello ${name}`
+
+
+--local storage 사용법---
+
+저장 :
+localStorage.setItem("key", "value");
+
+불러오기 :
+localStorage.getItem("key");
+
+삭제 :
+localStorage.remove("key");
+
+반복되는 string은 대문자 변수로 저장해두는 것이 오류발생 확률을 줄인다.
