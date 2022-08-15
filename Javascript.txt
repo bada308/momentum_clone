@@ -194,3 +194,39 @@ string.padEnd(자리수, 빈 뒷자리를 padding 할 string);
 ex)
 "1".padStart(2, "0"); ==> "01"
 "1".padEnd(2, "0"); ==> "10"
+
+
+
+--string으로 변환---
+
+localStorage에 array 형식으로 저장하기 위해 필요함
+
+JSON.stringify(element);
+
+반대로
+
+string -> JS object
+
+JSON.parse(string);
+
+
+--Array 각각의 item에 함수 실행---
+
+arrayName.forEach(function);
+
+JS는 지금 처리되고 있는 item에 대한 정보도 그냥 argument로 제공해줌 (event처럼!)
+
+
+--arrow function: 짧게 쓰는 법---
+
+arrayName.forEach((item) => ...)
+
+
+--user의 위치 반환하는 함수---
+
+navigator.geolocation.getCurrentPosition(success, error);
+
+
+--url 불러오기---
+
+fetch(url);
